@@ -1,5 +1,6 @@
 //creiamo un componente a parte per le informazioni dei prodotti in una card
 
+//importiamo link da react
 import { Link, NavLink } from "react-router-dom";
 
 export default function ProdCard(props) {
@@ -7,8 +8,8 @@ export default function ProdCard(props) {
     const { prodotto } = props;
 
     return (
-            <div className="product" >
-                <Link to={`/CardShop/${prodotto.id}`}>
+        <div className="product" >
+            <Link to={`/CardShop/${prodotto.id}`}>
                 <div className="product-image">
                     {/* immagini prodotti */}
                     <img src={prodotto.image} alt={prodotto.title} />
@@ -19,8 +20,8 @@ export default function ProdCard(props) {
                     <p className="prod-price">{prodotto.price + " €"}</p>
                     <p className="prod-type">{prodotto.category}</p>
                 </div>
-                </Link>
-            </div>
-        
+            </Link>
+        </div>
+
     )
 }

@@ -18,7 +18,7 @@ const links = [
 const NavBar = () => {
 
     //stato per il pulsante attiva disattiva tramite il suo stato
-    const {budgetMode, setBudgetMode} = useContext(BudgetContext);
+    const { budgetMode, setBudgetMode } = useContext(BudgetContext);
 
     return (
         <nav>
@@ -30,7 +30,7 @@ const NavBar = () => {
                 ))}
                 <li>
                     {/* creazione pulsante attiva-disattiva modalità budget */}
-                    <button onClick={()=> setBudgetMode(!budgetMode)}>
+                    <button className={budgetMode ? "green-btn" : "grey-btn"} onClick={() => setBudgetMode(!budgetMode)}>
                         {budgetMode ? "Disattiva modalità Budget" : "Attiva modalità Budget"}
                     </button>
                 </li>

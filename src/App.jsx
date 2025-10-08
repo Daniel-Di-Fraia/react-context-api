@@ -21,21 +21,21 @@ function App() {
 
   return (
     <>
-    {/* Wrappiamo l’intera applicazione con il BudgetProvider */}
-    <BudgetProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="/CardShop">
-              <Route path="" element={<CardShop />} />
-              <Route path=":id" element={<InfoProduct />} />
+      {/* Wrappiamo l’intera applicazione con il BudgetProvider */}
+      <BudgetProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/aboutUs" element={<AboutUs />} />
+              <Route path="/CardShop">
+                <Route path="" element={<CardShop />} />
+                <Route path=":id" element={<InfoProduct />} />
+              </Route>
+              <Route path="*" element={<Error />} />
             </Route>
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
       </BudgetProvider>
     </>
   )

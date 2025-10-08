@@ -13,14 +13,14 @@ import { BudgetContext } from "../context/BudgetContext";
 export default function ProductList() {
 
     //stato per il pulsante attiva disattiva tramite budgetcontext
-    const {budgetMode, setBudgetMode} = useContext(BudgetContext);
+    const { budgetMode, setBudgetMode } = useContext(BudgetContext);
 
     // stato per l'array di oggetti
     const [products, setProducts] = useState([]);
 
     //filtriamo l array di oggetti in base allo stato del pulsante (attivato/disattivato)
-    const budgetFiltered = budgetMode ? products.filter(prod => 
-        prod.price <= 30) : products; 
+    const budgetFiltered = budgetMode ? products.filter(prod =>
+        prod.price <= 30) : products;
 
 
 
