@@ -1,5 +1,7 @@
 // import della parte di componenti di navigazione per routing
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { BudgetContext } from "../context/BudgetContext";
 
 // dati menù di navigazione pagina
 const links = [
@@ -10,6 +12,9 @@ const links = [
 
 
 const NavBar = () => {
+
+    const {budgetMode, setBudgetMode} = useContext(BudgetContext);
+
     return (
         <nav>
             <ul>
@@ -18,6 +23,11 @@ const NavBar = () => {
                         <NavLink to={link.path}>{link.label}</NavLink>
                     </li>
                 ))}
+                <li>
+                    <button onClick={()=> setBudgetMode(!budgetMode)}>
+                        {budgetMode ? "Attiva modalità Budget" : "disattiva modalità Budget"}
+                    </button>
+                </li>
             </ul>
         </nav>
     )
