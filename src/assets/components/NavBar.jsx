@@ -25,7 +25,7 @@ const NavBar = () => {
                 ))}
                 <li>
                     <button onClick={()=> setBudgetMode(!budgetMode)}>
-                        {budgetMode ? "Attiva modalità Budget" : "disattiva modalità Budget"}
+                        {budgetMode ? "Disattiva modalità Budget" : "Attiva modalità Budget"}
                     </button>
                 </li>
             </ul>
