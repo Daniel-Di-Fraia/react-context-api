@@ -1,6 +1,10 @@
 // import della parte di componenti di navigazione per routing
 import { Link, NavLink } from "react-router-dom";
+
+//importiamo useContext da react
 import { useContext } from "react";
+
+//importiamo il nostro budgetContext
 import { BudgetContext } from "../context/BudgetContext";
 
 // dati menù di navigazione pagina
@@ -13,6 +17,7 @@ const links = [
 
 const NavBar = () => {
 
+    //stato per il pulsante attiva disattiva tramite il suo stato
     const {budgetMode, setBudgetMode} = useContext(BudgetContext);
 
     return (
@@ -24,6 +29,7 @@ const NavBar = () => {
                     </li>
                 ))}
                 <li>
+                    {/* creazione pulsante attiva-disattiva modalità budget */}
                     <button onClick={()=> setBudgetMode(!budgetMode)}>
                         {budgetMode ? "Disattiva modalità Budget" : "Attiva modalità Budget"}
                     </button>

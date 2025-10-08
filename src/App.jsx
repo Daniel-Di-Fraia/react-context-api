@@ -21,6 +21,7 @@ function App() {
 
   return (
     <>
+    {/* Wrappiamo l’intera applicazione con il BudgetProvider */}
     <BudgetProvider>
       <BrowserRouter>
         <Routes>
