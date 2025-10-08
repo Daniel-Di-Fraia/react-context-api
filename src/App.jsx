@@ -13,12 +13,15 @@ import AboutUs from './assets/pages/AboutUs';
 import CardShop from './assets/pages/CardShop';
 import InfoProduct from './assets/pages/InfoProduct';
 import Error from './assets/pages/Error';
+import { BudgetProvider } from './assets/context/BudgetContext';
+
 
 function App() {
 
 
   return (
     <>
+    <BudgetProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
@@ -32,6 +35,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </BudgetProvider>
     </>
   )
 }
