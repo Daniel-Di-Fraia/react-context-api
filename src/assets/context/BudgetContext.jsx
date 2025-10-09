@@ -5,7 +5,7 @@ import { createContext, useState } from 'react';
 //oggetto che servirà per condividere dati tra componenti senza dover passare props
 const BudgetContext = createContext();
 
-//creazione provider componente che conterrà il valore del contesto (tutti i figli ne avranno l'accesso)
+//creazione provider, componente che conterrà il valore del contesto (tutti i figli ne avranno l'accesso)
 const BudgetProvider = ({ children }) => {
 
     //variabile di stato condivisa

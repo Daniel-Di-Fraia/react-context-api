@@ -18,7 +18,7 @@ export default function ProductList() {
     // stato per l'array di oggetti
     const [products, setProducts] = useState([]);
 
-    //filtriamo l array di oggetti in base allo stato del pulsante (attivato/disattivato)
+    //filtriamo l array di oggetti in base allo stato del pulsante (attivato/disattivato) in base al prezzo
     const budgetFiltered = budgetMode ? products.filter(prod =>
         prod.price <= 30) : products;
 
